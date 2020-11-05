@@ -1,9 +1,8 @@
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
-const MONGODB_USERNAME = process.env.MONGODB_USERNAME;
-const MONGODB_PASSWORD = process.env.MONGODB_PASSWORD;
-const DATA_BASE = process.env.DATA_BASE;
+
+const URI = process.env.URI;
 
 
 
@@ -18,9 +17,7 @@ const schema = require('./schema/schema');
 
 
 
-const url = `mongodb+srv://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@cluster0.ae11y.mongodb.net/${DATA_BASE}?retryWrites=true&w=majority`;
-
-mongoose.connect(url,
+mongoose.connect(URI,
   { useNewUrlParser: true, useUnifiedTopology: true });
 
 
