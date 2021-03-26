@@ -1,11 +1,11 @@
 const graphql = require("graphql");
 var _ = require('lodash');
 
-const User = require('../model/user');
-const Hobby = require('../model/hobby');
-const Post = require('../model/post');
-const Credit_Score = require('../model/credit_score');
-const Product = require('../model/product');
+const User = require('../mongoose_model/user');
+const Hobby = require('../mongoose_model/hobby');
+const Post = require('../mongoose_model/post');
+const Credit_Score = require('../mongoose_model/credit_score');
+const Product = require('../mongoose_model/product');
 
 
 // mongo compass: 
@@ -29,11 +29,11 @@ let hobbiesData = [
 ];
 //dummy Post:
 let postData = [
-  { id: "31", comment: "I like Emmily", userId: "2" },
-  { id: "32", comment: "I can make her happy", userId: "2" },
-  { id: "33", comment: "She is cute", userId: "3" },
-  { id: "34", comment: "She will reply me back", userId: "4" },
-  { id: "35", comment: "She is not nice", userId: "5" },
+  { id: "31", comment: "Great Bank", userId: "2" },
+  { id: "32", comment: "I always use their mobile app", userId: "2" },
+  { id: "33", comment: "Excellent customer serviec", userId: "3" },
+  { id: "34", comment: "Bank of future", userId: "4" },
+  { id: "35", comment: "Their service made me happy", userId: "5" },
 ]
 
 //dummy Credit_score:
