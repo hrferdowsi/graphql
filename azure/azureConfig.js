@@ -1,8 +1,6 @@
 
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-  }
-  
+const azureSQL = ()=>{
+
   const IEnvs= {
     URI: process.env['URI'],
     SQL_USERNAME: process.env['SQL_USERNAME'],
@@ -12,7 +10,7 @@ if (process.env.NODE_ENV !== 'production') {
   } 
 
 const config = {
-    server: IEnvs.SQL_SERVER, // update me
+  server: IEnvs.SQL_SERVER, // update me
     authentication: {
       type: 'default',
       options: {
@@ -28,4 +26,5 @@ const config = {
     }
   };
 
-  export default {config};
+}
+  export default azureSQL;

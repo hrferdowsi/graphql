@@ -185,7 +185,6 @@ const RootQuery = new GraphQLObjectType({
       // this what we are using when we send the query
       type: UserType,
       args: { id: { type: GraphQLString } },
-
       resolve(parent, args) {
         //get and return data from the datasource
         // return _.find(usersData, { id: args.id })

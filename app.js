@@ -47,16 +47,16 @@ const config = {
 
 
 //tesing SQL query
-const sqlConnection = new Connection(config);
-sqlConnection.connect()
-sqlConnection.on("connect", err => {
-  if (err) {
-    console.error(err.message);
-  } else {
-    console.log("SQL is connected")
-    queryDatabase();
-  }
-});
+  const sqlConnection = new Connection(config);
+  sqlConnection.connect()
+  sqlConnection.on("connect", err => {
+    if (err) {
+      console.error(err.message);
+    } else {
+      console.log("SQL is connected")
+      queryDatabase();
+    }
+  });
 
 
 
@@ -88,8 +88,6 @@ function queryDatabase() {
 }
 
 ///
-
-
 
 // Mongoose
 
