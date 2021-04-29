@@ -2,9 +2,6 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
 
 const IEnvs= {
   URI: process.env['URI'],
@@ -46,7 +43,7 @@ const config = {
 };
 
 
-//tesing SQL query
+// //tesing SQL query
   const sqlConnection = new Connection(config);
   sqlConnection.connect()
   sqlConnection.on("connect", err => {
@@ -101,9 +98,11 @@ mongoose.connect(
 );
 
 
+// const User = require('./mongoose_model/user');
 
 mongoose.connection.once('open', () => {
-  console.log("mongoose is connected")
+  console.log("mongoose is connected");
+  // console.log(User.findById("5f9bfe54c0fd1d0da4bae587"));
 })
 
 app.use(cors());

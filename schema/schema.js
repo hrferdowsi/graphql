@@ -176,7 +176,7 @@ const ProductType = new GraphQLObjectType({
 })
 //++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// RootQuery: is actually shows how all the relationships are mapped out
+// RootQuery:  shows how all the relationships are mapped out
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType", // this name is for documentation
   description: "This is inside RootQuery",
